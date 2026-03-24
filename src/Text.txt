@@ -1,0 +1,20 @@
+
+commend:npm i or npm install
+
+24/03/2026
+
+## Props
+
+    Props is nothing but passing data from parent component to child component.
+
+        Declearing a Props
+        Destructuring a props
+
+## style in react
+
+    global style--- index.css,app.css 
+    external style--- to  create a seperate css file
+    module style
+    inline style
+    object style
+
