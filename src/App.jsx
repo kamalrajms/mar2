@@ -3,6 +3,11 @@ import Greeting from "./Greeting";
 import DestructuringPROPS from "./DestructuringPROPS";
 import Eg from "./Component/Eg";
 import Externalcss from "./Component/Externalcss";
+import ModuleStyle from "./Component/ModuleStyle";
+import Objectstyle from "./Component/Objectstyle";
+import ConditionalRendering from "./Component/ConditionalRendering";
+import ListRendering from "./Component/ListRendering";
+import UseStateHook from "./Component/UseStateHook";
 
 export default function App() {
   const name = "Kumar";
@@ -17,8 +22,13 @@ export default function App() {
 
   return (
     <>
-      <h1>Hello {name}</h1>
-      <Externalcss/>
+    <UseStateHook/>
+      <ListRendering />
+      <ConditionalRendering />
+      <h1 style={{ padding: "20px", color: "red" }}>Hello {name}</h1>
+      <Objectstyle />
+      <ModuleStyle />
+      <Externalcss />
       <Eg />
       <Greeting firstName={name} age={age} />
       <DestructuringPROPS name={name} age={age} city={city} />
