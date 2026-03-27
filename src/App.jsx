@@ -8,6 +8,10 @@ import Objectstyle from "./Component/Objectstyle";
 import ConditionalRendering from "./Component/ConditionalRendering";
 import ListRendering from "./Component/ListRendering";
 import UseStateHook from "./Component/UseStateHook";
+import DarkMode from "./Component/DarkMode";
+import Feild from "./Component/Feild";
+import RegForm from "./Component/RegForm";
+import RegFromCondition from "./Component/RegFromCondition";
 
 export default function App() {
   const name = "Kumar";
@@ -22,7 +26,11 @@ export default function App() {
 
   return (
     <>
-    <UseStateHook/>
+      <RegFromCondition />
+      <RegForm />
+      <Feild />
+      <DarkMode />
+      <UseStateHook />
       <ListRendering />
       <ConditionalRendering />
       <h1 style={{ padding: "20px", color: "red" }}>Hello {name}</h1>

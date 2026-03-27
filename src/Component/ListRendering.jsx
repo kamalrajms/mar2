@@ -22,7 +22,7 @@ export default function ListRendering() {
       <h2>user data</h2>
       <ul>
         {user.map((person)=>(
-            <li>{person.name}</li>
+            <li key={person.id}>{person.name}</li>
         ))}
       </ul>
     </div>

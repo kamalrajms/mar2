@@ -33,13 +33,19 @@ commend:npm i or npm install
     Rendering multiple itemm dynamically using .map()
 
 
-## useState()
+
+27/3/2026
+
+## useState() && form & Controlled input 
 
     useState is a react  hook that allows you to add state (data that can change over time)
     to a functional component.
 
     normally ,in js functionas, variable disappear after the function runs.
     but with useState, react remember value between re-render.
+
+    useState is a React Hook that allows functional components to store 
+    and manage data (state) and re-render the UI when that data changes.
 
     syntax:
 
