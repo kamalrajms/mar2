@@ -15,6 +15,8 @@ import RegFromCondition from "./Component/RegFromCondition";
 import UseEffectHook from "./Component/UseEffectHook";
 import Timer from "./Component/Timer";
 import StopWatch from "./Component/StopWatch";
+import UseEffectAPI from "./Component/UseEffectAPI";
+import UseRefHook from "./Component/UseRefHook";
 
 export default function App() {
   const name = "Kumar";
@@ -29,6 +31,8 @@ export default function App() {
 
   return (
     <>
+      <UseRefHook />
+      <UseEffectAPI />
       <StopWatch />
       <Timer />
       <UseEffectHook />
