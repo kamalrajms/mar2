@@ -7,9 +7,35 @@
   background-color: black;
   color: aliceblue;
 }
-.external{
+.external {
   margin: 200px;
 }
-.module{
+.module {
   margin: 500px;
+}
+
+/* useref */
+.image-box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  cursor: pointer;
+  background-color: aqua;
+}
+.ref-img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+/* useContext */
+
+.light {
+  background-color: #fff;
+  color: #333;
+}
+.black {
+  background-color: #000;
+  color: #fff;
 }

@@ -18,6 +18,22 @@ export default function UseRefHook() {
     }, 1000);
     return () => clearInterval(intervalRef.current);
   }, []);
+  // eg3
+
+  const [newProduct, setNewProduct] = useState(true);
+  const [imageURL, setImageURL] = useState("");
+
+  const imgRef = useRef(0);
+
+  const handleImage = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const preview = URL.createObjectURL(file);
+      setImageURL(preview);
+      setNewProduct(false);
+    }
+  };
+
   return (
     <div>
       {/* eg1 */}
@@ -29,6 +45,28 @@ export default function UseRefHook() {
       <div>
         <h2>Timer:{sec}</h2>
         <button onClick={() => clearInterval(intervalRef.current)}>Stop</button>
+      </div>
+
+      {/* eg3 */}
+      <div>
+        <input
+          type="file"
+          ref={imgRef}
+          accept="image/*"
+          hidden
+          onChange={handleImage}
+        />
+        {newProduct ? (
+          <div className="image-box" onClick={() => imgRef.current.click()}>
+            upload image
+          </div>
+        ) : (
+          <img
+            className="ref-img"
+            src={imageURL}
+            onClick={() => imgRef.current.click()}
+          />
+        )}
       </div>
     </div>
   );
