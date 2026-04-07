@@ -146,3 +146,36 @@ commend:npm i or npm install
     .info--information
     .biz--business
     .in--india
+
+
+7/4/2026
+
+## useReducer()
+
+    useReducer hook is mainly used to maintain a complex state
+
+    syntax:
+            const [state,dispatch]=useReducer(reducerfunction,initialState)
+
+            state-- current state (like usestate value)
+            dispatch(action)-- a function to  tell reducer what to do
+            reducerfunction(state,action)-- the logic that reducer a new state
+            initialState-- starting value
+
+## usecallBack ()
+
+    usecallBack is a hook used to memoize (store) a function so that react does not recrate
+    the function on every render unless dependency changes.It is mainly used for performance 
+    optimization in react Applications.
+
+    Every time  a component re-renders,
+    It crecreate a brand new copy of every function inside it.
+
+    Even if the function code looks exactly the same,
+    React sees it as different because it's new object in memory.
+
+    syntax:
+
+        const name=usecallBack(()=>{
+            // code
+        },[dependency1, dependency2  ....])

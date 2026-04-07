@@ -19,6 +19,9 @@ import UseEffectAPI from "./Component/UseEffectAPI";
 import UseRefHook from "./Component/UseRefHook";
 import First from "./Context/First";
 import ContextForm from "./Context/ContextForm";
+import UseReducerHook from "./Component/UseReducerHook";
+import ReducerHookForm from "./Component/ReducerHookForm";
+import UseCallBack from "./Component/UseCallBack";
 
 export const Pass = createContext();
 export default function App() {
@@ -38,6 +41,9 @@ export default function App() {
 
   return (
     <>
+    <UseCallBack/>
+      <ReducerHookForm />
+      <UseReducerHook />
       <div style={{ padding: "20px", border: "2px solid #333" }}>
         <Pass.Provider value={{ color, setColor, data }}>
           <ContextForm />
