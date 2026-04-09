@@ -14,6 +14,7 @@ export default function StopWatch() {
     return () => clearInterval(intervalId);
   }, [running]);
 
+  
   const start = () => {
     setRunning(true);
   };

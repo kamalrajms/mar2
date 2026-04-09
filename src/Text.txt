@@ -24,7 +24,7 @@
 
     step 1 : npm create vite@latest [project_name]
     step 2 : select react
-    step 3 : select javascript+swc
+    step 3 : select javascript+ react compailer
     step 4 : npm install                // install node module packages
     step 5 : npm run dev 
 
@@ -161,6 +161,7 @@ commend:npm i or npm install
             dispatch(action)-- a function to  tell reducer what to do
             reducerfunction(state,action)-- the logic that reducer a new state
             initialState-- starting value
+8/4/2026
 
 ## usecallBack ()
 
@@ -179,3 +180,52 @@ commend:npm i or npm install
         const name=usecallBack(()=>{
             // code
         },[dependency1, dependency2  ....])
+
+9/4/2026
+
+## Routing in React && nested routing
+
+    Routing means navigating  b/w different pages in a web app without refreshinng the  browser.
+    In traditional websites ,clicking a link reloads the whole page.
+    In react (SAP) ,routing lets us changes the view without reloading.
+
+        Better performance (no full page reload)
+        Smooth user Experiance
+        Control over navigation without server request.
+
+
+    commend:npm install react-router-dom
+
+    structure:
+
+        <BrowserRouter>
+            <Routes>
+                <Route path="adderss path" element={component}/>
+                <Route path="" element={home}/>
+                <Route path="" element={about}/>
+            </Routes>
+        </BrowserRouter>
+
+        BrowserRouter:
+            it is the main wrapper component for routing in react app.
+            it enables navigation using the browser's URL (history URL) 
+            Without this  ,routing will not working.
+
+        Routers:
+            It contains all the <Route/> component.
+            It tells react router which component to show for which path.
+            Only one rout will match and render at a time.
+
+        Route:
+            Define a specific URL path and which component should load  for that path.
+
+
+
+## useNavigate()--- Routing in react
+
+    by using this useNavigate  we can navigating b/w component as fun0ctionally.
+
+
+## UseId()
+
+     UseId is a react hooh that creates a unique and stable ID for each  component instance.

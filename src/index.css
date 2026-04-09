@@ -39,3 +39,21 @@
   background-color: #000;
   color: #fff;
 }
+
+/* Routing */
+.header {
+  height: 10vh;
+  background-color: aqua;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sub-header{
+  height: 10vh;
+  background-color: rgb(255, 183, 0);
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

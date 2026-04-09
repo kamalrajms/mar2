@@ -22,6 +22,14 @@ import ContextForm from "./Context/ContextForm";
 import UseReducerHook from "./Component/UseReducerHook";
 import ReducerHookForm from "./Component/ReducerHookForm";
 import UseCallBack from "./Component/UseCallBack";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Home from "./Router/Home";
+import About from "./Router/About";
+import Service from "./Router/Service";
+import Contact from "./Router/Contact";
+import WebDev from "./Router/WebDev";
+import AppDev from "./Router/AppDev";
+// import UseCallBack from "./Component/UseCallBack";
 
 export const Pass = createContext();
 export default function App() {
@@ -39,43 +47,69 @@ export default function App() {
   const data = { name: "react" };
   console.log(color);
 
+  const display = false;
+
   return (
     <>
-    <UseCallBack/>
-      <ReducerHookForm />
-      <UseReducerHook />
-      <div style={{ padding: "20px", border: "2px solid #333" }}>
-        <Pass.Provider value={{ color, setColor, data }}>
-          <ContextForm />
-        </Pass.Provider>
+      {display && (
+        <div>
+          <UseCallBack />
+          <ReducerHookForm />
+          <UseReducerHook />
+          <div style={{ padding: "20px", border: "2px solid #333" }}>
+            <Pass.Provider value={{ color, setColor, data }}>
+              <ContextForm />
+            </Pass.Provider>
+          </div>
+          <div style={{ padding: "20px", border: "2px solid #333" }}>
+            App component--{name}
+            <Pass.Provider value={name}>
+              <First />
+            </Pass.Provider>
+          </div>
+          <UseRefHook />
+          <UseEffectAPI />
+          <StopWatch />
+          <Timer />
+          <UseEffectHook />
+          <RegFromCondition />
+          <RegForm />
+          <Feild />
+          <DarkMode />
+          <UseStateHook />
+          <ListRendering />
+          <ConditionalRendering />
+          <h1 style={{ padding: "20px", color: "red" }}>Hello {name}</h1>
+          <Objectstyle />
+          <ModuleStyle />
+          <Externalcss />
+          <Eg />
+          <Greeting firstName={name} age={age} />
+          <DestructuringPROPS name={name} age={age} city={city} />
+          <DestructuringPROPS name={name2} age={age2} city={city2} />
+          <DestructuringPROPS name={name3} age={age3} city={city3} />
+        </div>
+      )}
+      <div>
+        <BrowserRouter>
+          <div className="header">
+            <Link to="/Home">Home</Link>
+            <Link to="/About">About</Link>
+            <Link to="">Service</Link>
+            <Link to="/Contact">Contact</Link>
+          </div>
+
+          <Routes>
+            <Route path="Home" element={<Home />} />
+            <Route path="/About" element={<About />}>
+              <Route path="WebDev" element={<WebDev />} />
+              <Route path="AppDev" element={<AppDev />} />
+            </Route>
+            <Route path="" element={<Service />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
       </div>
-      <div style={{ padding: "20px", border: "2px solid #333" }}>
-        App component--{name}
-        <Pass.Provider value={name}>
-          <First />
-        </Pass.Provider>
-      </div>
-      <UseRefHook />
-      <UseEffectAPI />
-      <StopWatch />
-      <Timer />
-      <UseEffectHook />
-      <RegFromCondition />
-      <RegForm />
-      <Feild />
-      <DarkMode />
-      <UseStateHook />
-      <ListRendering />
-      <ConditionalRendering />
-      <h1 style={{ padding: "20px", color: "red" }}>Hello {name}</h1>
-      <Objectstyle />
-      <ModuleStyle />
-      <Externalcss />
-      <Eg />
-      <Greeting firstName={name} age={age} />
-      <DestructuringPROPS name={name} age={age} city={city} />
-      <DestructuringPROPS name={name2} age={age2} city={city2} />
-      <DestructuringPROPS name={name3} age={age3} city={city3} />
     </>
   );
 }

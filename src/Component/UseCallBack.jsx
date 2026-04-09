@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import UseCallbackBTn from "./UseCallbackBTn";
+import UseCallbackChild from "./UseCallbackChild";
 
 export default function UseCallBack() {
   const [count, setCount] = useState(0);
+
   const handleClick = () => {
-    console.log("clicked");
+    console.log("Button clicked");
   };
+
   return (
     <div>
-      <h2>useCallback-{count}</h2>
-      <button onClick={handleClick}>Click</button>
+      <h2>Count: {count}</h2>
+
       <button onClick={() => setCount(count + 1)}>Increment</button>
-      <UseCallbackBTn onclick={handleClick}/>
+
+      <UseCallbackChild onClick={handleClick} />
     </div>
   );
 }
